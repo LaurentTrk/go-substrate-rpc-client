@@ -146,7 +146,7 @@ type EventRecords struct {
 // a custom event record with a wrong type. For example your custom event record has a field with a length prefixed
 // type, such as types.Bytes, where your event in reallity contains a fixed width type, such as a types.U32.
 func (e EventRecordsRaw) DecodeEventRecords(m *Metadata, t interface{}) error {
-	log.Debug(fmt.Sprintf("will decode event records from raw hex: %#x", e))
+	log.Info(fmt.Sprintf("will decode event records from raw hex: %#x", e))
 
 	// ensure t is a pointer
 	ttyp := reflect.TypeOf(t)

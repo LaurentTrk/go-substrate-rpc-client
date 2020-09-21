@@ -65,6 +65,22 @@ type EventBalancesDeposit struct {
 	Topics  []Hash
 }
 
+// EventBalancesReserved is emitted when some balance was reserved (moved from free to reserved).
+type EventBalancesReserved struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
+// EventBalancesUnreserved is emitted when some balance was unreserved (moved from reserved to free).
+type EventBalancesUnreserved struct {
+	Phase   Phase
+	Who     AccountID
+	Balance U128
+	Topics  []Hash
+}
+
 // EventGrandpaNewAuthorities is emitted when a new authority set has been applied
 type EventGrandpaNewAuthorities struct {
 	Phase          Phase

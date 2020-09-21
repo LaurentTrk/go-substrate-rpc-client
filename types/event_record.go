@@ -63,6 +63,8 @@ type EventRecords struct {
 	Balances_Transfer                  []EventBalancesTransfer                  //nolint:stylecheck,golint
 	Balances_BalanceSet                []EventBalancesBalanceSet                //nolint:stylecheck,golint
 	Balances_Deposit                   []EventBalancesDeposit                   //nolint:stylecheck,golint
+	Balances_Reserved                  []EventBalancesReserved                  //nolint:stylecheck,golint
+	Balances_Unreserved                []EventBalancesUnreserved                //nolint:stylecheck,golint
 	Grandpa_NewAuthorities             []EventGrandpaNewAuthorities             //nolint:stylecheck,golint
 	Grandpa_Paused                     []EventGrandpaPaused                     //nolint:stylecheck,golint
 	Grandpa_Resumed                    []EventGrandpaResumed                    //nolint:stylecheck,golint

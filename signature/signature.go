@@ -47,7 +47,7 @@ var reAddressNew = regexp.MustCompile(`SS58 Address:\s+([a-zA-Z0-9]*)\n`)
 func KeyringPairFromSecret(seedOrPhrase, network string) (KeyringPair, error) {
 	var args []string
 
-	args = []string{"inspect-key", seedOrPhrase}
+	args = []string{"inspect", seedOrPhrase}
 	if network != "" {
 		args = append(args, []string{"--network", network}...)
 	}
